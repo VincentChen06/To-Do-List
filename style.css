@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+body {
+  color: #FFF;
+  background: linear-gradient(to bottom, #301934, #A020F0);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 5rem 3rem;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+
+header h1{ 
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: #D4D4D4;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main {
+  margin: auto;
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+}
+
+input{
+  outline: none;
+  background: none;
+  appearance: none;
+  border: none;
+}
+
+button {
+  color: #00ff00;
+  background-color: #3b3b3b;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 1.2rem;
+  padding: 0.6rem;
+  margin: 0 .4rem;
+}
+
+button:active {
+  background-color: green;
+}
+
+.taskList {
+  padding: 2rem;
+}
+
+.taskList h2 {
+  color: #D4D4D4;
+  font-family: "Press Start 2P", system-ui;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title .text{
+  font-size: 2rem;
+  width: 100%;
+  display: block;
+  text-align: left;
+  font-weight: bold;
+}
+
+.title .text:not(:read-only) {
+  color: blue;
+}
+
+.title .actions{
+  font-size: 0.23rem;
+  border-radius: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+.description{
+  color: black;
+  font-size: 1.2rem;
+  max-width: 380px;
+  text-align: left;
+  overflow: auto;
+}
+.due-date {
+  color: black;
+  font-size: 1rem;
+  text-align: left;
+  overflow: auto;
+  font-weight: bold;
+}
+
+#toDo .title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #D4D4D4;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#newForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#newTitleInput{
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: #D4D4D4;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  flex: 1 1 45%;
+}
+
+#newTitleInput::placeholder {
+  color: #636363;
+}
+
+#newDescriptionInput {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: #D4D4D4;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  flex: 1 1 60%;
+}
+
+#newDescriptionInput::placeholder {
+  color: #636363;
+}
+
+#newDueDateInput {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: #D4D4D4;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  flex: 1 1 1%;
+  color:#636363;
+}
+
+#filter {
+  color: black;
+  min-width: 150px;
+  text-align: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.edit {
+  color: #ADD8E6;
+}
+.edit:active {
+  background-color: blue;
+}
+
+.trash {
+  color: #E3242B;
+}
+
+.trash:active {
+  background-color: red;
+}
+
+.check {
+  color: #00ff00;
+
+}
+
+.check:active {
+  background-color: green;
+}
+
+.done {
+  color: red;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.color-picker {
+  margin-top: 0.8rem; 
+  margin-right: 0.1rem;
+  cursor: pointer;
+}
+
+.box div {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+}
+
+.box div:nth-child(1){
+  top: 20%;
+  left: 85%;
+  animation: animate 12s linear infinite;
+
+}
+.box div:nth-child(2){
+  top: 85%;
+  left:20%;
+  animation: animate 10s linear infinite;
+
+}
+.box div:nth-child(3){
+  top: 18%;
+  left: 10%;
+  animation: animate 13s linear infinite;
+
+}
+.box div:nth-child(4){
+  top: 20%;
+  left: 72%;
+  animation: animate 18s linear infinite;
+
+}
+.box div:nth-child(5){
+  top: 66%;
+  left: 14%;
+  animation: animate 9s linear infinite;
+
+}
+.box div:nth-child(6){
+  top: 86%;
+  left: 75%;
+  animation: animate 16s linear infinite;
+
+}
+.box div:nth-child(7){
+  top: 69%;
+  left: 84%;
+  animation: animate 18s linear infinite;
+
+}
+.box div:nth-child(8){
+  top: 50%;
+  left: 70%;
+  animation: animate 19s linear infinite;
+
+}
+.box div:nth-child(9){
+  top: 30%;
+  left: 23%;
+  animation: animate 9s linear infinite;
+
+}
+.box div:nth-child(10){
+  top: 45%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+
+}
+
+@keyframes animate {
+  0%{
+    transform: scale(0) translateY(0) rotate(0);
+  }
+  100% {
+    transform: scale(1.2) translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
